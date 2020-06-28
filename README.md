@@ -1,0 +1,1 @@
+Detailed list of goods
