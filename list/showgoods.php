@@ -29,11 +29,11 @@ table{
 	//获取data0401表数据
 	$rs=mysql_query('select * from products');
 	var_dump($rs);
-	/*$rows=mysql_fetch_row($rs);
-	echo $rows[1].'<br>';
-	$rows=mysql_fetch_row($rs);
-	echo $rows[1].'<br>';
-	*/
+		/*$rows=mysql_fetch_row($rs);
+		echo $rows[1].'<br>';
+		$rows=mysql_fetch_row($rs);
+		echo $rows[1].'<br>';
+		*/
 ?>
 <table>
 <tr bgcolor="#FFFF33">
