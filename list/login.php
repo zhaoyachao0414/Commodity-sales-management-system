@@ -17,7 +17,6 @@ table{
 </style>
 
 </head>
-
 <body>
 <?php		//判断是否点击登录按钮
 if(isset($_POST['button']))
@@ -59,8 +58,7 @@ if(isset($_POST['button2'])){		//注册
 		echo "<script>alert('注册成功')</script>";}
 	else{
 		echo "<script>alert('注册失败')</script>";}
-}
-	
+}	
 ?>
 <form id="form1" name="form1" method="post" action="">
   <table width="500" height="100" border="1" align="center">
