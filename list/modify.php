@@ -6,23 +6,19 @@
 
 <style type="text/css">
 table,td,th{
-	border:#6F9 solid 2px;
-	}
+	border:#6F9 solid 2px;}
 table{
 	width:500px;
 	margin:auto;
 	font-size:25px;
-	background:#cc99bb;
-	}
+	background:#cc99bb;}
 </style>
-
 </head>
 
 <body>
 <?php
 @$id=$_GET['id'];   //获取需要修改的数据编号   
 echo $id;
-//连接数据库
 mysql_connect('localhost','root','') or die("数据库连接失败");
 mysql_query('use data0401') or die("数据库选择失败");
 mysql_query('set names utf8');
