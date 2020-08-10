@@ -16,6 +16,7 @@ table{
 </style>
 </head>
 
+	
 <script type="text/javascript">
 function jump(id)
 {
@@ -50,6 +51,7 @@ $rs = mysql_query('select * from products order by proid desc');
     <th>删除</th>
     
 <a href="add.php">添加商品</a>
+		
 <?php
 //循环取出匹配成关联数组
 while($rows=mysql_fetch_object($rs)){
