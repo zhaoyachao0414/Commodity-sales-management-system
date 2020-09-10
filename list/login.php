@@ -55,9 +55,11 @@ if(isset($_POST['button2'])){		//注册
 	$rs1=mysql_query($sql1);
 	//var_dump($rs1);
 	if($rs1){	//注册成功
-		echo "<script>alert('注册成功')</script>";}
+		echo "<script>alert('注册成功')</script>";
+	        }
 	else{
-		echo "<script>alert('注册失败')</script>";}
+		echo "<script>alert('注册失败')</script>";
+	    }
 }	
 ?>
 <form id="form1" name="form1" method="post" action="">
