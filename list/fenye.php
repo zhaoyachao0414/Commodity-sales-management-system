@@ -37,12 +37,12 @@ table{
 ?>
 <table>
 <tr bgcolor="#FFFF33">
-      <th width="50">编号</th>
-      <th width="180">商品名称</th>
-      <th width="180">规格</th>
-      <th width="100">价格</th>
-      <th width="100">库存量</th>
-      <th width="80">图片</th>
+      <th width="50"> 编号      </th>
+      <th width="180"> 商品名称 </th>
+      <th width="180"> 规格     </th>
+      <th width="100"> 价格     </th>
+      <th width="100"> 库存量   </th>
+      <th width="80"> 图片      </th>
       <th>网址</th>
     </tr>
   </table></th>
@@ -54,7 +54,7 @@ table{
 //在PHP中通过->符号调用对象的属性
 while($rows=mysql_fetch_object($rs)){
 	echo '<tr>';
-	echo '<td width="50">'.$rows -> proID.'</td>';
+	echo '<td width="50">'.$rows  -> proID.'</td>';
 	echo '<td width="180">'.$rows -> proname.'</td>';
 	echo '<td width="180">'.$rows -> proguide.'</td>';
 	echo '<td width="100">'.$rows -> proprice.'</td>';
