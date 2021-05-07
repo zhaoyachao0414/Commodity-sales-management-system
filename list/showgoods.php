@@ -29,11 +29,11 @@ table{
 	//获取data0401表数据
 	$rs=mysql_query('select * from products');
 	var_dump($rs);
-		/*$rows=mysql_fetch_row($rs);
-		echo $rows[1].'<br>';
-		$rows=mysql_fetch_row($rs);
-		echo $rows[1].'<br>';
-		*/
+	/*$rows=mysql_fetch_row($rs);
+	echo $rows[1].'<br>';
+	$rows=mysql_fetch_row($rs);
+	echo $rows[1].'<br>';
+	*/
 ?>
 <table>
 <tr bgcolor="#FFFF33">
@@ -43,18 +43,17 @@ table{
       <th width="100">价格</th>
       <th width="100">库存量</th>
       <th width="80">图片</th>
-      <th>网址</th>
+      <th>商品详细属性</th>
     </tr>
-  </table></th>
-</tr>
-</table>
-<table>
+  
+
+
 <?php
 /*（mysql_fetch_object）开始匹配时候指针指向第一个纪录，取出资源中的一条数据，匹配成对象，一条记录是一个对象，一个字段就是一个属性，指针下移一条*/
 //在PHP中通过->符号调用对象的属性
 while($rows=mysql_fetch_object($rs)){
 	echo '<tr>';
-	echo '<td width="50">'.$rows -> proID.'</td>';
+	echo '<td width="60">'.$rows -> proID.'</td>';
 	echo '<td width="180">'.$rows -> proname.'</td>';
 	echo '<td width="180">'.$rows -> proguide.'</td>';
 	echo '<td width="100">'.$rows -> proprice.'</td>';

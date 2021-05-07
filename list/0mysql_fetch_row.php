@@ -23,7 +23,7 @@ table{
 	//选择数据库：方法一
 	mysql_query('use data0401') or die('数据库选择失败？');
 	//选择数据库：方法二
-	//mysql_select_db('data0401') or die('数据库选择失败！！！');
+	
 //设置字符编码
 	mysql_query('set names utf8');
 	//mysql_select_db('data0401') or die('mysql_error');

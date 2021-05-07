@@ -40,7 +40,7 @@ if(isset($_POST['button']))
 	}
 	else
 	{
-		echo '登录失败,用户名或密码错误，请重新登录！';
+		echo '登录失败！';
 	}		
 }
 if(isset($_POST['button2'])){		//注册
@@ -60,6 +60,7 @@ if(isset($_POST['button2'])){		//注册
 	else{
 		echo "<script>alert('注册失败')</script>";}
 }
+
 	
 ?>
 <form id="form1" name="form1" method="post" action="">
@@ -74,6 +75,11 @@ if(isset($_POST['button2'])){		//注册
     </tr>
     <tr>
       <td align="center" valign="middle">密码:</td>
+      <td align="center" valign="middle"><label for="password"></label>
+      <input type="password" name="password" id="password" /></td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle">验证码:</td>
       <td align="center" valign="middle"><label for="password"></label>
       <input type="password" name="password" id="password" /></td>
     </tr>

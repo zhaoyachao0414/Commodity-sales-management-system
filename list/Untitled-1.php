@@ -26,20 +26,16 @@ table{
 	//定义页面大小
 	$pagesize=8;
 	
-	//无需排序，求出总记录数
-	$rs=mysql_query('select count(*) from products'); //聚合函数，返回一行一列
-	$rows=mysql_fetch_row($rs);		//不用循环，取出一行，将资源匹配成索引数组
+	//求总记录数
+	$rs=mysql_query('select count(*) from products');
+	$rows=mysql_fetch_row($rs);		//将资源匹配成索引数组
 	$recordcount=$rows[0];         //总记录数
-	//echo $recordcount;
-	echo "<br/>";
-
-	$pagecount=ceil($recordcount/$pagesize); //利用ceil向上取数，求出总页数
-	//echo $pagecount.'<br>';
+	//求总页数
+	$pagecount=ceil($recordcount/$pagesize);
+	//echo $pagecount;
 	//获得传递的当前页码
-	$pageno=$_GET['pageno']==''?1:$_GET['pageno']; //三元运算符运算默认打开首页为第一页
+	@$pageno=isset($_GET['$pageno']) ? $_GET['$pageno'] : 1;
 	//echo $pageno;
-	//$pageno=$_GET['pageno'];
-	echo $pageno;
 	//求当前页的起始位置
 	$startno=($pageno-1)*$pagesize;
 	//获取当前页的内容
@@ -72,12 +68,12 @@ while($rows=mysql_fetch_assoc($rss)){
 ?>
 </table>
 
-<!--循环页面，循环出页码-->
+<!--循环页面-->
 <table>
 <tr>
 	<td>
     <?php
-    for($i=1;$i<=$pagecount;$i++)
+    for($i=1;$i<$pagecount;$i++)
     {
     	echo '<a href="fenye.php?pageno='.$i.'">'.$i.'</a>&nbsp&nbsp&nbsp&nbsp&nbsp';
     }
@@ -85,29 +81,5 @@ while($rows=mysql_fetch_assoc($rss)){
     </td>
 </tr>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html> 

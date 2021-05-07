@@ -16,7 +16,6 @@ table{
 </style>
 </head>
 
-	
 <script type="text/javascript">
 function jump(id)
 {
@@ -46,12 +45,11 @@ $rs = mysql_query('select * from products order by proid desc');
     <th>价格</th>
     <th>库存量</th>
     <th>图片</th>
-    <th>网址</th>
+    <th>商品详细属性</th>
     <th>修改</th>
     <th>删除</th>
     
 <a href="add.php">添加商品</a>
-		
 <?php
 //循环取出匹配成关联数组
 while($rows=mysql_fetch_object($rs)){
@@ -64,7 +62,7 @@ while($rows=mysql_fetch_object($rs)){
 	echo $rows ->proimages =='' ? '<td>图片暂缺</td>' : '<td width="120"><img src="'.$rows ->proimages.'"/></td>';
 	echo '<td>'.$rows ->proweb.'</td>';
 	echo '<td><input type="button" value="修改" onclick="location.href=\'modify.php?id='.$rows -> proID.'\'"></td>';
-	echo '<td><input tyope="button" value="删除" onclick="jump(' .$rows -> proID.')"/></td>';
+	echo '<td><input type="button" value="删除" onclick="jump(' .$rows -> proID.')"/></td>';
 	echo '</tr>';
 	}
 ?>
