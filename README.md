@@ -1,1 +1,1 @@
-Detailed list of goods
+Commodity sales management system
