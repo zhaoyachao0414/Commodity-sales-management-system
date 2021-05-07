@@ -62,23 +62,7 @@ while($rows=mysql_fetch_row($rs)){
 	echo $rows[5]=='' ? '<td>图片暂缺</td>' : '<td width="80"><img src="'.$rows[5].'"/></td>';
 	echo '<td>'.$rows[6].'</td>';
 	echo '</tr>';
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 ?>
 </table>
 </body>
